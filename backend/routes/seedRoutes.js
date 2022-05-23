@@ -1,7 +1,7 @@
 import express from 'express';
-import Product from '../models/modeloProducto.js';
+import Product from '../models/productModel.js';
 import data from '../data.js';
-import User from '../models/modeloUser.js';
+import User from '../models/userModel.js';
 
 const seedRouter = express.Router();
 

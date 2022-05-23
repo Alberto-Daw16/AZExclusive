@@ -1,16 +1,16 @@
 import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
-import Product from '../models/modeloProducto.js';
+import Product from '../models/productModel.js';
 import { isAuth, isAdmin } from '../utils.js';
 
-const productoRouter = express.Router();
+const productRouter = express.Router();
 
-productoRouter.get('/', async (req, res) => {
+productRouter.get('/', async (req, res) => {
   const products = await Product.find();
   res.send(products);
 });
 
-productoRouter.post(
+productRouter.post(
   '/',
   isAuth,
   isAdmin,
@@ -32,7 +32,7 @@ productoRouter.post(
   })
 );
 
-productoRouter.put(
+productRouter.put(
   '/:id',
   isAuth,
   isAdmin,
@@ -57,7 +57,7 @@ productoRouter.put(
   })
 );
 
-productoRouter.delete(
+productRouter.delete(
   '/:id',
   isAuth,
   isAdmin,
@@ -72,7 +72,7 @@ productoRouter.delete(
   })
 );
 
-productoRouter.post(
+productRouter.post(
   '/:id/reviews',
   isAuth,
   expressAsyncHandler(async (req, res) => {
@@ -110,7 +110,7 @@ productoRouter.post(
 
 const PAGE_SIZE = 3;
 
-productoRouter.get(
+productRouter.get(
   '/admin',
   isAuth,
   isAdmin,
@@ -132,7 +132,7 @@ productoRouter.get(
   })
 );
 
-productoRouter.get(
+productRouter.get(
   '/search',
   expressAsyncHandler(async (req, res) => {
     const { query } = req;
@@ -210,7 +210,7 @@ productoRouter.get(
   })
 );
 
-productoRouter.get(
+productRouter.get(
   '/categories',
   expressAsyncHandler(async (req, res) => {
     const categories = await Product.find().distinct('category');
@@ -218,7 +218,7 @@ productoRouter.get(
   })
 );
 
-productoRouter.get('/slug/:slug', async (req, res) => {
+productRouter.get('/slug/:slug', async (req, res) => {
   const product = await Product.findOne({ slug: req.params.slug });
   if (product) {
     res.send(product);
@@ -226,7 +226,7 @@ productoRouter.get('/slug/:slug', async (req, res) => {
     res.status(404).send({ message: 'Product Not Found' });
   }
 });
-productoRouter.get('/:id', async (req, res) => {
+productRouter.get('/:id', async (req, res) => {
   const product = await Product.findById(req.params.id);
   if (product) {
     res.send(product);
@@ -235,4 +235,4 @@ productoRouter.get('/:id', async (req, res) => {
   }
 });
 
-export default productoRouter;
+export default productRouter;

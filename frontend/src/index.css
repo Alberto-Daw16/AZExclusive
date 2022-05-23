@@ -58,7 +58,7 @@ main {
   color: #f08000;
 }
 
-/* sidebar */
+
 .navbar-brand {
   font-weight: bold;
 }
@@ -84,7 +84,7 @@ main {
   font-weight: bold;
 }
 
-/* Map */
+
 
 .full-box {
   height: 100vh;
@@ -125,4 +125,8 @@ main {
 }
 button.thumbnail {
   padding: 0;
+}
+
+.center{
+  text-align: center;
 }

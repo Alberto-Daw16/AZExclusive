@@ -192,6 +192,12 @@ function ProductScreen() {
                     </Col>
                   </Row>
                 </ListGroup.Item>
+                <ListGroup.Item>
+                  <Row>
+                    <Col>Región:</Col>
+                    <Col>{product.region}</Col>
+                  </Row>
+                </ListGroup.Item>
 
                 {product.countInStock > 0 && (
                   <ListGroup.Item>

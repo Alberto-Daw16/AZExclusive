@@ -130,6 +130,7 @@ export default function PlaceOrderScreen() {
                         <span>{item.quantity}</span>
                       </Col>
                       <Col md={3}>{item.price}€</Col>
+                      <Col md={3}>Región: <strong>{item.region}</strong></Col>
                     </Row>
                   </ListGroup.Item>
                 ))}

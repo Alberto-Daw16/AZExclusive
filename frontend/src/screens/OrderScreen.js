@@ -262,6 +262,7 @@ export default function OrderScreen() {
                         <span>{item.quantity}</span>
                       </Col>
                       <Col md={3}>{item.price}€</Col>
+                      <Col md={3}><strong>{item.region}</strong></Col>
                     </Row>
                   </ListGroup.Item>
                 ))}

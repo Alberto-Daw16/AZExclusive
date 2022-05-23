@@ -37,7 +37,8 @@ import MapScreen from './screens/MapScreen';
 import ConocenosScreen from './screens/KnownUs';
 import Image from 'react-bootstrap/Image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faCartShopping} from '@fortawesome/free-solid-svg-icons';
+import {faCartShopping} from '@fortawesome/free-solid-svg-icons'
+import VPNScreen from './screens/VPNScreen'
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Tienda);
@@ -95,9 +96,12 @@ function App() {
               <Navbar.Collapse id="basic-navbar-nav">
                 <SearchBox />
                 <Nav className="me-auto  w-100  justify-content-end">
+                <Link to="/vpn" className="nav-link">
+                    Tutorial VPN
+                </Link>
                 <Link to="/knownus" className="nav-link">
                     Conócenos
-                  </Link>
+                </Link>
                   <Link to="/cart" className="nav-link">
                   <FontAwesomeIcon icon={faCartShopping} />
                     {cart.cartItems.length > 0 && (
@@ -181,6 +185,7 @@ function App() {
               <Route path="/signin" element={<SigninScreen />} />
               <Route path="/signup" element={<SignupScreen />} />
               <Route path="/knownus" element={<ConocenosScreen />} />
+              <Route path="/vpn" element={<VPNScreen />} />
               <Route
                 path="/profile"
                 element={

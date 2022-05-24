@@ -5,9 +5,9 @@ import User from '../models/userModel.js';
 import Product from '../models/productModel.js';
 import { isAuth, isAdmin} from '../utils.js';
 
-const pedidosRouter = express.Router();
+const orderRouter = express.Router();
 
-pedidosRouter.get(
+orderRouter.get(
   '/',
   isAuth,
   isAdmin,
@@ -17,7 +17,7 @@ pedidosRouter.get(
   })
 );
 
-pedidosRouter.post(
+orderRouter.post(
   '/',
   isAuth,
   expressAsyncHandler(async (req, res) => {
@@ -36,7 +36,7 @@ pedidosRouter.post(
   })
 );
 
-pedidosRouter.get(
+orderRouter.get(
   '/summary',
   isAuth,
   isAdmin,
@@ -80,7 +80,7 @@ pedidosRouter.get(
   })
 );
 
-pedidosRouter.get(
+orderRouter.get(
   '/mine',
   isAuth,
   expressAsyncHandler(async (req, res) => {
@@ -89,7 +89,7 @@ pedidosRouter.get(
   })
 );
 
-pedidosRouter.get(
+orderRouter.get(
   '/:id',
   isAuth,
   expressAsyncHandler(async (req, res) => {
@@ -102,7 +102,7 @@ pedidosRouter.get(
   })
 );
 
-pedidosRouter.put(
+orderRouter.put(
   '/:id/deliver',
   isAuth,
   expressAsyncHandler(async (req, res) => {
@@ -120,7 +120,7 @@ pedidosRouter.put(
 
 
 
-pedidosRouter.delete(
+orderRouter.delete(
   '/:id',
   isAuth,
   isAdmin,
@@ -135,4 +135,4 @@ pedidosRouter.delete(
   })
 );
 
-export default pedidosRouter;
+export default orderRouter;

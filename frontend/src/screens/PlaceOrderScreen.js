@@ -97,7 +97,7 @@ export default function PlaceOrderScreen() {
                 {cart.shippingAddress.city}, {cart.shippingAddress.postalCode},
                 {cart.shippingAddress.country}
               </Card.Text>
-              <Link to="/shipping">Edit</Link>
+              <Link to="/shipping">Editar</Link>
             </Card.Body>
           </Card>
 
@@ -130,7 +130,7 @@ export default function PlaceOrderScreen() {
                         <span>{item.quantity}</span>
                       </Col>
                       <Col md={3}>{item.price}€</Col>
-                      <Col md={3}>Región: <strong>{item.region}</strong></Col>
+                      <Col md={3}>Región: <strong></strong>{item.region}</Col>
                     </Row>
                   </ListGroup.Item>
                 ))}

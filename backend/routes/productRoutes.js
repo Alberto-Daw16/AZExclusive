@@ -13,13 +13,13 @@ productRouter.get('/', async (req, res) => {
 productRouter.post(
   '/',
   isAuth,
-  isAdmin,
   expressAsyncHandler(async (req, res) => {
     const newProduct = new Product({
       name: 'nuevo ' + Date.now(),
       slug: 'producto-' + Date.now(),
       image: '/images/p1.jpg',
       price: 0,
+      region:'españita',
       category: 'que nos va',
       brand: 'a dar',
       countInStock: 0,

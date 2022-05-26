@@ -59,6 +59,7 @@ export default function ProductEditScreen() {
   const [price, setPrice] = useState('');
   const [image, setImage] = useState('');
   const [images, setImages] = useState([]);
+  const [region, setRegion] = useState('');
   const [category, setCategory] = useState('');
   const [countInStock, setCountInStock] = useState('');
   const [brand, setBrand] = useState('');
@@ -74,6 +75,7 @@ export default function ProductEditScreen() {
         setPrice(data.price);
         setImage(data.image);
         setImages(data.images);
+        setRegion(data.region);
         setCategory(data.category);
         setCountInStock(data.countInStock);
         setBrand(data.brand);
@@ -218,14 +220,14 @@ export default function ProductEditScreen() {
               ))}
             </ListGroup>
           </Form.Group>
-          <Form.Group className="mb-3" controlId="additionalImageFile">
-            <Form.Label>Imágenes adicionales</Form.Label>
+          <Form.Group className="mb-3" controlId="region">
+            <Form.Label>Región</Form.Label>
             <Form.Control
-              type="file"
-              onChange={(e) => uploadFileHandler(e, true)}
+              value={region}
+              onChange={(e) => setRegion(e.target.value)}
+              required
             />
-            {loadingUpload && <LoadingBox></LoadingBox>}
-          </Form.Group>
+            </Form.Group>
 
           <Form.Group className="mb-3" controlId="category">
             <Form.Label>Categoria</Form.Label>

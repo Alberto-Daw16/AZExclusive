@@ -36,7 +36,7 @@ return (<div>
             <p>&nbsp;</p>
             <h2>Paso 2: AZExclusive &gt; Añadir a la cesta</h2>
             <p>Te recomendamos crear una cuenta antes de emprezar un pedido.😉</p>
-            <Image src="/images/step2.png"/>
+            <Image src="/images/step2.png" style={{ maxWidth: '60rem' }}/>
             <p>Importante ver y recordar la región del juego seleccionado.</p>
             <p>&nbsp;</p>
             <h2>Paso 3: AZExclusive &gt; Pago</h2>

@@ -66,8 +66,8 @@ const data = {
         price: 40,
         region: 'TR',
         brand: 'Milestone S.r.l',
-        rating: 4.7,
-        numReviews: 22,
+        rating: 0.0,
+        numReviews: 0,
         countInStock: 22,
         description:
         "Motores en marcha: arranca el videojuego con la experiencia más inmersiva y auténtica de MotoGP™ de la historia. .MUNDO DE MOTOGP™ AL COMPLETOExplora el contenido de la temporada 2022 en todas las clases de MotoGP™ y las demás categorías."},

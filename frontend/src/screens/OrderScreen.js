@@ -277,7 +277,7 @@ export default function OrderScreen() {
               <ListGroup variant="flush">
                 <ListGroup.Item>
                   <Row>
-                    <Col>Items</Col>
+                    <Col>Productos</Col>
                     <Col>{order.itemsPrice.toFixed(2)}€</Col>
                   </Row>
                 </ListGroup.Item>

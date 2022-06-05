@@ -7,7 +7,7 @@ return (<div>
             <title>Conócenos</title>
         </Helmet>
         <p>&nbsp;</p>
-        <h1 className="hammer"><b>Sobre nosotros</b></h1>
+        <h1 className="hammer text-center"><b>Sobre nosotros</b></h1>
         <p>&nbsp;</p>
         <div>En cuanto a las debilidades de nuestra empresa, por ejemplo sería la inexperiencia en el ámbito laboral, lo cual puede dificultar el comienzo en gran medida. Desconocimiento financiero para poder realizar la página web con todos estos servicios. Y poco capital disponible para invertir desde el inicio.
             También existen una serie de amenazas como puede ser la competencia con otras empresas, hacerse hueco en el mercado y sobretodo competir con la clientela que ya tienen ciertas tiendas. Sin embargo tenemos unas fortalezas que otras no tienen como una gran capacidad de trabajo y organización que ayuda sobretodo a no estancarse cuando surgen problemas, innovar el producto que ya existe, aprovechar el crecimiento del mercado online debido a la pandemia y ofrecer servicios siempre con garantía demostrando honestidad y puntualidad.

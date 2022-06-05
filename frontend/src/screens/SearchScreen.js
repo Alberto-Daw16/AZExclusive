@@ -36,15 +36,15 @@ const reducer = (state, action) => {
 
 const prices = [
   {
-    name: '1€ to 50€',
+    name: '1€ a 50€',
     value: '1-50',
   },
   {
-    name: '51€ to 200€',
+    name: '51€ a 200€',
     value: '51-200',
   },
   {
-    name: '201€ to 1000€',
+    name: '201€ a 1000€',
     value: '201-1000',
   },
 ];
@@ -134,7 +134,7 @@ export default function SearchScreen() {
       </Helmet>
       <Row>
         <Col md={3}>
-          <h3>Categorias</h3>
+          <h2 className='hammer'>Categorias</h2>
           <div>
             <ul>
               <li>
@@ -158,7 +158,7 @@ export default function SearchScreen() {
             </ul>
           </div>
           <div>
-            <h3>Precio</h3>
+            <h2 className='hammer'>Precio</h2>
             <ul>
               <li>
                 <Link
@@ -181,7 +181,7 @@ export default function SearchScreen() {
             </ul>
           </div>
           <div>
-            <h3>Avg. Review</h3>
+            <h2 className='hammer'>Avg. Review</h2>
             <ul>
               {ratings.map((r) => (
                 <li key={r.name}>
@@ -214,10 +214,10 @@ export default function SearchScreen() {
               <Row className="justify-content-between mb-3">
                 <Col md={6}>
                   <div>
-                    {countProducts === 0 ? 'No' : countProducts} Resultados
+                    {countProducts === 0 ? 'Sin' : countProducts} Resultados
                     {query !== 'all' && ' : ' + query}
                     {category !== 'all' && ' : ' + category}
-                    {price !== 'all' && ' : Price ' + price}
+                    {price  !== 'all' && ' : Precio ' + price + '€'}
                     {rating !== 'all' && ' : Rating ' + rating + ' o más'}
                     {query !== 'all' ||
                     category !== 'all' ||

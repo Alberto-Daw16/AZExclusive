@@ -73,7 +73,14 @@ main {
 .brandlogo{
   width: 100px;
 }
-
+.sidehammer{
+  font-family:'Hammersmith One';
+  font-size: 40px;
+}
+.sidecategory{
+  font-family:'Hammersmith One';
+  font-size: 25px;
+}
 .hammer{
   font-family:'Hammersmith One';
 }

@@ -149,7 +149,7 @@ export default function ProductListScreen() {
           </div>
         </Col>
       </Row>
-
+      <p>&nbsp;</p>
       {loadingCreate && <LoadingBox></LoadingBox>}
       {loadingDelete && <LoadingBox></LoadingBox>}
 

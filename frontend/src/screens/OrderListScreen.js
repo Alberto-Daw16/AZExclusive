@@ -93,6 +93,7 @@ export default function OrderListScreen() {
         <title>Pedidos</title>
       </Helmet>
       <h1 className='hammer'>Pedidos realizados en la web</h1>
+      <p>&nbsp;</p>
       {loadingDelete && <LoadingBox></LoadingBox>}
       {loading ? (
         <LoadingBox></LoadingBox>

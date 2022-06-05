@@ -5,7 +5,6 @@ import axios from 'axios';
 import { Tienda } from '../Tienda';
 import { getError } from '../utils';
 import Container from 'react-bootstrap/Container';
-import ListGroup from 'react-bootstrap/ListGroup';
 import Form from 'react-bootstrap/Form';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
@@ -48,7 +47,7 @@ export default function ProductEditScreen() {
 
   const { state } = useContext(Tienda);
   const { userInfo } = state;
-  const [{ loading, error, loadingUpdate, loadingUpload }, dispatch] =
+  const [{ loading, error, loadingUpdate }, dispatch] =
     useReducer(reducer, {
       loading: true,
       error: '',
@@ -124,38 +123,7 @@ export default function ProductEditScreen() {
       dispatch({ type: 'UPDATE_FAIL' });
     }
   };
-  const uploadFileHandler = async (e, forImages) => {
-    const file = e.target.files[0];
-    const bodyFormData = new FormData();
-    bodyFormData.append('file', file);
-    try {
-      dispatch({ type: 'UPLOAD_REQUEST' });
-      const { data } = await axios.post('/api/upload', bodyFormData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-          authorization: `Bearer ${userInfo.token}`,
-        },
-      });
-      dispatch({ type: 'UPLOAD_SUCCESS' });
 
-      if (forImages) {
-        setImages([...images, data.secure_url]);
-      } else {
-        setImage(data.secure_url);
-      }
-      toast.success('Imagen subida con éxito');
-    } catch (err) {
-      toast.error(getError(err));
-      dispatch({ type: 'UPLOAD_FAIL', payload: getError(err) });
-    }
-  };
-  const deleteFileHandler = async (fileName, f) => {
-    console.log(fileName, f);
-    console.log(images);
-    console.log(images.filter((x) => x !== fileName));
-    setImages(images.filter((x) => x !== fileName));
-    toast.success('Imagen borrada con éxito');
-  };
   return (
     <Container className="small-container">
       <Helmet>
@@ -201,26 +169,7 @@ export default function ProductEditScreen() {
               required
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="imageFile">
-            <Form.Label>Subir Imagen</Form.Label>
-            <Form.Control type="file" onChange={uploadFileHandler} />
-            {loadingUpload && <LoadingBox></LoadingBox>}
-          </Form.Group>
 
-          <Form.Group className="mb-3" controlId="additionalImage">
-            <Form.Label>Imágenes adicionales</Form.Label>
-            {images.length === 0 && <MessageBox>Sin imágenes</MessageBox>}
-            <ListGroup variant="flush">
-              {images.map((x) => (
-                <ListGroup.Item key={x}>
-                  {x}
-                  <Button variant="light" onClick={() => deleteFileHandler(x)}>
-                    <i className="fa fa-times-circle"></i>
-                  </Button>
-                </ListGroup.Item>
-              ))}
-            </ListGroup>
-          </Form.Group>
           <Form.Group className="mb-3" controlId="region">
             <Form.Label>Región</Form.Label>
             <Form.Control

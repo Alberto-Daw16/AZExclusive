@@ -52,7 +52,8 @@ export default function DashboardScreen() {
 
   return (
     <div>
-      <h1 className='hammer'>Bienvenido al Dashboard</h1>
+      <h1 className='hammer text-center'><strong>Bienvenido al Dashboard</strong></h1>
+      <p>&nbsp;</p>
       {loading ? (
         <LoadingBox />
       ) : error ? (
@@ -97,6 +98,7 @@ export default function DashboardScreen() {
               </Card>
             </Col>
           </Row>
+          <p>&nbsp;</p>
           <div className="my-3">
             <h2 className='hammer'>Ventas en los últimos días</h2>
             {summary.dailyOrders.length === 0 ? (
@@ -114,6 +116,7 @@ export default function DashboardScreen() {
               ></Chart>
             )}
           </div>
+          <p>&nbsp;</p>
           <div className="my-3">
             <h2 className='hammer'>Productos vendidos por categorias</h2>
             {summary.productCategories.length === 0 ? (

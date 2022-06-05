@@ -139,7 +139,7 @@ export default function ProductListScreen() {
     <div>
       <Row>
         <Col>
-          <h1>Productos</h1>
+          <h1 className='hammer'>Lista de Productos</h1>
         </Col>
         <Col className="col text-end">
           <div>
@@ -159,13 +159,14 @@ export default function ProductListScreen() {
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <>
-          <table className="table">
+          <table className="table table-dark table-striped table-hover">
             <thead>
               <tr>
                 <th>ID</th>
                 <th>NOMBRE</th>
                 <th>PRECIO</th>
                 <th>CATEGORIA</th>
+                <th>REGIÓN</th>
                 <th>EMPRESA</th>
                 <th>ACCIONES</th>
               </tr>
@@ -177,9 +178,11 @@ export default function ProductListScreen() {
                   <td>{product.name}</td>
                   <td>{product.price}</td>
                   <td>{product.category}</td>
+                  <td>{product.region}</td>
                   <td>{product.brand}</td>
                   <td>
                     <Button
+                      className='edit'
                       type="button"
                       variant="light"
                       onClick={() => navigate(`/admin/product/${product._id}`)}
@@ -188,6 +191,7 @@ export default function ProductListScreen() {
                     </Button>
                     &nbsp;
                     <Button
+                      className='delete'
                       type="button"
                       variant="light"
                       onClick={() => deleteHandler(product)}

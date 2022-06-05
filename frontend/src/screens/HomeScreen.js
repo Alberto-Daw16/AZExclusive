@@ -47,7 +47,9 @@ function HomeScreen() {
       <Helmet>
         <title>AZ Exclusive</title>
       </Helmet>
-      <h1>Productos destacados</h1>
+      <br/>
+      <h1 className='hammer text-center'>Juegos del momento</h1>
+      <br/>
       <div className="products">
         {loading ? (
           <LoadingBox />

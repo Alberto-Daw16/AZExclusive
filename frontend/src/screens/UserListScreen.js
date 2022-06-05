@@ -92,7 +92,7 @@ export default function UserListScreen() {
       <Helmet>
         <title>Usuarios</title>
       </Helmet>
-      <h1>Usuarios</h1>
+      <h1 className='hammer'>Lista de usuarios en la web</h1>
 
       {loadingDelete && <LoadingBox></LoadingBox>}
       {loading ? (
@@ -100,7 +100,7 @@ export default function UserListScreen() {
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
-        <table className="table">
+        <table className="table table-dark table-striped table-hover">
           <thead>
             <tr>
               <th>ID</th>
@@ -119,6 +119,7 @@ export default function UserListScreen() {
                 <td>{user.isAdmin ? 'SI' : 'NO'}</td>
                 <td>
                   <Button
+                  className='edit'
                     type="button"
                     variant="light"
                     onClick={() => navigate(`/admin/user/${user._id}`)}
@@ -127,6 +128,7 @@ export default function UserListScreen() {
                   </Button>
                   &nbsp;
                   <Button
+                    className='delete'
                     type="button"
                     variant="light"
                     onClick={() => deleteHandler(user)}

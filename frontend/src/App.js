@@ -34,7 +34,7 @@ import OrderListScreen from './screens/OrderListScreen';
 import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
 import MapScreen from './screens/MapScreen';
-import ConocenosScreen from './screens/KnownUs';
+import Knownus from './screens/KnownUs';
 import Image from 'react-bootstrap/Image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCartShopping} from '@fortawesome/free-solid-svg-icons'
@@ -80,7 +80,8 @@ function App() {
       >
         <ToastContainer position="bottom-center" limit={1} />
         <header>
-          <Navbar bg="dark" variant="dark" expand="lg">
+          <Navbar bg='dark' variant="dark" expand="lg">
+          <Image src='/images/bg.png' className='logo'></Image>
             <Container>
               <Button
                 variant="dark"
@@ -90,26 +91,12 @@ function App() {
               </Button>
 
               <LinkContainer to="/">
-                <Navbar.Brand><Image src="/images/logo.png" className='img-thumbnail'/></Navbar.Brand>
+              <Navbar.Brand>AZ <i className='cursive'>Exclusive</i><Image src="/images/logo2.png" className='brandlogo'></Image></Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
-                <SearchBox />
-                <Nav className="me-auto  w-100  justify-content-end">
-                <Link to="/vpn" className="nav-link">
-                    Tutorial VPN
-                </Link>
-                <Link to="/knownus" className="nav-link">
-                    Conócenos
-                </Link>
-                  <Link to="/cart" className="nav-link">
-                  <FontAwesomeIcon icon={faCartShopping} />
-                    {cart.cartItems.length > 0 && (
-                      <Badge pill bg="danger">
-                        {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
-                      </Badge>
-                    )}
-                  </Link>
+              <SearchBox />
+                <Nav className="me-auto  w-100  justify-content-end ">
                   {userInfo ? (
                     <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
                       <LinkContainer to="/profile">
@@ -148,9 +135,24 @@ function App() {
                       </LinkContainer>
                     </NavDropdown>
                   )}
+                  <Link to="/vpn" className="nav-link">
+                    Tutorial VPN
+                </Link>
+                <Link to="/knownus" className="nav-link">
+                    Conócenos
+                </Link>
+                  <Link to="/cart" className="nav-link">
+                  <FontAwesomeIcon icon={faCartShopping} />
+                    {cart.cartItems.length > 0 && (
+                      <Badge pill bg="danger">
+                        {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                      </Badge>
+                    )}
+                  </Link>
                 </Nav>
               </Navbar.Collapse>
-            </Container>
+              </Container>
+              <Image src='/images/bg.png' className='logo'></Image>
           </Navbar>
         </header>
         <div
@@ -184,7 +186,7 @@ function App() {
               <Route path="/search" element={<SearchScreen />} />
               <Route path="/signin" element={<SigninScreen />} />
               <Route path="/signup" element={<SignupScreen />} />
-              <Route path="/knownus" element={<ConocenosScreen />} />
+              <Route path="/knownus" element={<Knownus />} />
               <Route path="/vpn" element={<VPNScreen />} />
               <Route
                 path="/profile"
@@ -280,7 +282,7 @@ function App() {
           </Container>
         </main>
         <footer>
-          <div className="text-center">Todos los derechos reservados</div>
+          <div className="text-center rigths">Todos los derechos reservados</div>
         </footer>
       </div>
     </BrowserRouter>

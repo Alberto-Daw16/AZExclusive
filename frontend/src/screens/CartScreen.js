@@ -41,7 +41,7 @@ export default function CartScreen() {
       <Helmet>
         <title>Cesta</title>
       </Helmet>
-      <h1>Cesta</h1>
+      <h1 className='hammer'>Cesta</h1>
       <Row>
         <Col md={8}>
           {cartItems.length === 0 ? (
@@ -102,7 +102,7 @@ export default function CartScreen() {
             <Card.Body>
               <ListGroup variant="flush">
                 <ListGroup.Item>
-                  <h3>
+                  <h3 className='hammer'>
                     Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}{' '}
                     producto/s) : €
                     {cartItems.reduce((a, c) => a + c.price * c.quantity, 0)}

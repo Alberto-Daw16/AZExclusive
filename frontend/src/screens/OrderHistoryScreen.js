@@ -55,13 +55,13 @@ export default function OrderHistoryScreen() {
         <title>Historial Pedidos</title>
       </Helmet>
 
-      <h1>Historial Pedidos</h1>
+      <h1 className='hammer'>Historial Pedidos</h1>
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
-        <table className="table">
+        <table className="table table-dark table-striped table-hover">
           <thead>
             <tr>
               <th>ID</th>
@@ -86,6 +86,7 @@ export default function OrderHistoryScreen() {
                 </td>
                 <td>
                   <Button
+                    className='edit'
                     type="button"
                     variant="light"
                     onClick={() => {

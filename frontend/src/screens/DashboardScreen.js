@@ -52,7 +52,7 @@ export default function DashboardScreen() {
 
   return (
     <div>
-      <h1>Dashboard</h1>
+      <h1 className='hammer'>Bienvenido al Dashboard</h1>
       {loading ? (
         <LoadingBox />
       ) : error ? (
@@ -68,7 +68,7 @@ export default function DashboardScreen() {
                       ? summary.users[0].numUsers
                       : 0}
                   </Card.Title>
-                  <Card.Text> Usuarios</Card.Text>
+                  <Card.Text>Usuarios totales</Card.Text>
                 </Card.Body>
               </Card>
             </Col>
@@ -80,7 +80,7 @@ export default function DashboardScreen() {
                       ? summary.orders[0].numOrders
                       : 0}
                   </Card.Title>
-                  <Card.Text> Pedidos</Card.Text>
+                  <Card.Text>Pedidos totales realizados</Card.Text>
                 </Card.Body>
               </Card>
             </Col>
@@ -92,13 +92,13 @@ export default function DashboardScreen() {
                       ? summary.orders[0].totalSales.toFixed(2)
                       : 0}€
                   </Card.Title>
-                  <Card.Text> Ventas en pedidos</Card.Text>
+                  <Card.Text>Ventas en pedidos</Card.Text>
                 </Card.Body>
               </Card>
             </Col>
           </Row>
           <div className="my-3">
-            <h2>Ventas</h2>
+            <h2 className='hammer'>Ventas en los últimos días</h2>
             {summary.dailyOrders.length === 0 ? (
               <MessageBox>Sin ventas</MessageBox>
             ) : (
@@ -115,7 +115,7 @@ export default function DashboardScreen() {
             )}
           </div>
           <div className="my-3">
-            <h2>Categorias</h2>
+            <h2 className='hammer'>Productos vendidos por categorias</h2>
             {summary.productCategories.length === 0 ? (
               <MessageBox>Sin categoria</MessageBox>
             ) : (

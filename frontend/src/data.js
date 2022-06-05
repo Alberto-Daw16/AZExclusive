@@ -88,7 +88,7 @@ const data = {
           name: 'NordVpn 3 meses',
           slug: 'nordvpn',
           category: 'VPN',
-          image: '/images/nordvpn.webp',
+          image: '/images/nordvpn.png',
           price: 12,
           region: 'EU/BR/TR/US',
           brand: 'Tefincom & Co., S.A',

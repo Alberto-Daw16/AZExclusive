@@ -92,14 +92,14 @@ export default function OrderListScreen() {
       <Helmet>
         <title>Pedidos</title>
       </Helmet>
-      <h1>Pedidos</h1>
+      <h1 className='hammer'>Pedidos realizados en la web</h1>
       {loadingDelete && <LoadingBox></LoadingBox>}
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
-        <table className="table">
+        <table className="table table-dark table-striped table-hover">
           <thead>
             <tr>
               <th>ID</th>
@@ -127,6 +127,7 @@ export default function OrderListScreen() {
                 </td>
                 <td>
                   <Button
+                    className='edit'
                     type="button"
                     variant="light"
                     onClick={() => {
@@ -137,6 +138,7 @@ export default function OrderListScreen() {
                   </Button>
                   &nbsp;
                   <Button
+                    className='delete'
                     type="button"
                     variant="light"
                     onClick={() => deleteHandler(order)}

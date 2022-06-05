@@ -105,6 +105,7 @@ export default function ProductEditScreen() {
           image,
           images,
           category,
+          region,
           brand,
           countInStock,
           description,

@@ -93,7 +93,7 @@ export default function UserListScreen() {
         <title>Usuarios</title>
       </Helmet>
       <h1 className='hammer'>Lista de usuarios en la web</h1>
-
+      <p>&nbsp;</p>
       {loadingDelete && <LoadingBox></LoadingBox>}
       {loading ? (
         <LoadingBox></LoadingBox>

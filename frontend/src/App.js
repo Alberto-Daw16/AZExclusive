@@ -227,7 +227,6 @@ function App() {
               ></Route>
               <Route path="/payment" element={<PaymentMethodScreen />}></Route>
 
-              
               <Route
                 path="/admin/dashboard"
                 element={

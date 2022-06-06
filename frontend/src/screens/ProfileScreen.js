@@ -66,7 +66,7 @@ export default function ProfileScreen() {
       <Helmet>
         <title>Perfil</title>
       </Helmet>
-      <h1 className="my-3">Perfil</h1>
+      <h1 className="my-3 hammer">Perfil</h1>
       <form onSubmit={submitHandler}>
         <Form.Group className="mb-3" controlId="name">
           <Form.Label>Nombre</Form.Label>

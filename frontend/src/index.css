@@ -161,5 +161,16 @@ button.thumbnail {
 
 .rigths{
   font-family:'Hammersmith One';
-  color: white;
+  color: black;
+}
+
+.logo2{
+  position: relative;
+  float: right;
+  width: 250px;
+}
+.logo3{
+  position: relative;
+  float: left;
+  width: 250px;
 }

@@ -53,7 +53,7 @@ export default function SignupScreen() {
       <Helmet>
         <title>Registro de usuario</title>
       </Helmet>
-      <h1 className="my-3">Registro de usuario</h1>
+      <h1 className="my-3 hammer">Registro de usuario</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group className="mb-3" controlId="name">
           <Form.Label>Nombre</Form.Label>

@@ -118,7 +118,7 @@ export default function DashboardScreen() {
           </div>
           <p>&nbsp;</p>
           <div className="my-3">
-            <h2 className='hammer'>Productos vendidos por categorias</h2>
+            <h2 className='hammer'>Productos según sus categorias</h2>
             {summary.productCategories.length === 0 ? (
               <MessageBox>Sin categoria</MessageBox>
             ) : (

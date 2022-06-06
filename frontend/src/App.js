@@ -280,8 +280,9 @@ function App() {
             </Routes>
           </Container>
         </main>
-        <footer>
-          <div className="text-center rigths">Todos los derechos reservados</div>
+        <footer> 
+          <Image src='/images/logo.png' className='logo3'></Image> 
+          <Image src='/images/logo.png' className='logo2'></Image> 
         </footer>
       </div>
     </BrowserRouter>

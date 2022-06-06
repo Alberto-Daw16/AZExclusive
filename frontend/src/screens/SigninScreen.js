@@ -46,7 +46,7 @@ export default function SigninScreen() {
       <Helmet>
         <title>Iniciar Sesión</title>
       </Helmet>
-      <h1 className="my-3">Iniciar Sesión</h1>
+      <h1 className="my-3 hammer">Iniciar Sesión</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group className="mb-3" controlId="email">
           <Form.Label>Email</Form.Label>
